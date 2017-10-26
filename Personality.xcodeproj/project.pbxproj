@@ -99,6 +99,9 @@
 		1C1BACDD1FA27D44002E41E1 /* Personality */ = {
 			isa = PBXGroup;
 			children = (
+				1C1BAD141FA28116002E41E1 /* ViewModels */,
+				1C1BAD131FA2810A002E41E1 /* Models */,
+				1C1BAD121FA280FB002E41E1 /* Views */,
 				1C1BACDE1FA27D44002E41E1 /* AppDelegate.swift */,
 				1C1BACE01FA27D44002E41E1 /* ViewController.swift */,
 				1C1BACE21FA27D44002E41E1 /* Main.storyboard */,
@@ -126,6 +129,27 @@
 				1C1BAD031FA27D44002E41E1 /* Info.plist */,
 			);
 			path = PersonalityUITests;
+			sourceTree = "<group>";
+		};
+		1C1BAD121FA280FB002E41E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C1BAD131FA2810A002E41E1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C1BAD141FA28116002E41E1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
