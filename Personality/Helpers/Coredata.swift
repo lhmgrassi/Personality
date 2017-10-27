@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class CoreDataHelper: NSObject {
-
+	
 	static let shared = CoreDataHelper()
 	
 	// MARK: - Private properties
@@ -55,6 +55,28 @@ class CoreDataHelper: NSObject {
 extension CoreDataHelper {
 	
 	// MARK: - Helper functions
+	
+	func fetch<T>(fetchRequest: NSFetchRequest<NSFetchRequestResult>, forEntity: T.Type) -> [T]? where T: NSManagedObject {
+		do {
+			return try self.context.fetch(fetchRequest) as? [T]
+		} catch {
+			assertionFailure("Unresolved error")
+			return nil
+		}
+	}
+	
+	func getAllObjects<T>(for entity: T.Type) -> [T]? where T: NSManagedObject {
+		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: NSStringFromClass(T.self))
+		
+		return self.fetch(fetchRequest: fetchRequest, forEntity: entity)
+	}
+	
+	func get<T>(for entity: T.Type, withPredicate: NSPredicate) -> [T]? where T: NSManagedObject {
+		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: NSStringFromClass(T.self))
+		fetchRequest.predicate = withPredicate
+		
+		return self.fetch(fetchRequest: fetchRequest, forEntity: entity)
+	}
 	
 	func insertNewObject<T>(entity: T.Type) -> T where T : NSManagedObject {
 		guard let entity = NSEntityDescription.insertNewObject(forEntityName: NSStringFromClass(T.self), into: self.context) as? T else {

@@ -22,15 +22,15 @@ extension Questions {
 		
 		self.type = questionType[Constants.Json.Keys.Questions.QuestionType.type] as? String
 		
-		let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: NSStringFromClass(Categories.self))
-		fetchRequest.predicate = NSPredicate(format: "category == %@", "hard_fact")
+		let categoryString = dictionary[Constants.Json.Keys.Questions.category] as? String ?? ""
+		let predicate = NSPredicate(format: "category == %@", categoryString)
 		
-		guard let category = try? CoreDataHelper.shared.context.fetch(fetchRequest) as? [Categories] else {
+		guard let category = CoreDataHelper.shared.get(for: Categories.self, withPredicate: predicate) else {
 			assertionFailure("It was not possible to find the category")
 			return
 		}
 		
-		self.category = category?.first
+		self.category = category.first
 		
 		guard let options = questionType[Constants.Json.Keys.Questions.QuestionType.options] as? [String] else {
 			assertionFailure("No options found")

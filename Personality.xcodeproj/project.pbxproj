@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C1BACDF1FA27D44002E41E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BACDE1FA27D44002E41E1 /* AppDelegate.swift */; };
-		1C1BACE11FA27D44002E41E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BACE01FA27D44002E41E1 /* ViewController.swift */; };
+		1C1BACE11FA27D44002E41E1 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BACE01FA27D44002E41E1 /* CategoriesViewController.swift */; };
 		1C1BACE41FA27D44002E41E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BACE21FA27D44002E41E1 /* Main.storyboard */; };
 		1C1BACE71FA27D44002E41E1 /* Personality.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BACE51FA27D44002E41E1 /* Personality.xcdatamodeld */; };
 		1C1BACE91FA27D44002E41E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BACE81FA27D44002E41E1 /* Assets.xcassets */; };
@@ -30,6 +30,8 @@
 		1C1BAD511FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */; };
 		1C1BAD521FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */; };
 		1C1BAD531FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */; };
+		1C1BAD551FA2B695002E41E1 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */; };
+		1C1BAD591FA2B7EB002E41E1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD581FA2B7EB002E41E1 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,7 @@
 /* Begin PBXFileReference section */
 		1C1BACDB1FA27D44002E41E1 /* Personality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Personality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C1BACDE1FA27D44002E41E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C1BACE01FA27D44002E41E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C1BACE01FA27D44002E41E1 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		1C1BACE31FA27D44002E41E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C1BACE61FA27D44002E41E1 /* Personality.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Personality.xcdatamodel; sourceTree = "<group>"; };
 		1C1BACE81FA27D44002E41E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +71,8 @@
 		1C1BAD1F1FA287D6002E41E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1C1BAD241FA29320002E41E1 /* Coredata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coredata.swift; sourceTree = "<group>"; };
 		1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questions+Helper.swift"; sourceTree = "<group>"; };
+		1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		1C1BAD581FA2B7EB002E41E1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,17 +123,12 @@
 		1C1BACDD1FA27D44002E41E1 /* Personality */ = {
 			isa = PBXGroup;
 			children = (
-				1C1BAD231FA29222002E41E1 /* Datamodel */,
 				1C1BAD1A1FA28498002E41E1 /* Resources */,
 				1C1BAD151FA283FC002E41E1 /* Helpers */,
 				1C1BAD141FA28116002E41E1 /* ViewModels */,
 				1C1BAD131FA2810A002E41E1 /* Models */,
 				1C1BAD121FA280FB002E41E1 /* Views */,
 				1C1BACDE1FA27D44002E41E1 /* AppDelegate.swift */,
-				1C1BACE01FA27D44002E41E1 /* ViewController.swift */,
-				1C1BACE21FA27D44002E41E1 /* Main.storyboard */,
-				1C1BACEA1FA27D44002E41E1 /* LaunchScreen.storyboard */,
-				1C1BACED1FA27D44002E41E1 /* Info.plist */,
 			);
 			path = Personality;
 			sourceTree = "<group>";
@@ -155,6 +154,7 @@
 		1C1BAD121FA280FB002E41E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1C1BACE01FA27D44002E41E1 /* CategoriesViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +170,8 @@
 		1C1BAD141FA28116002E41E1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1C1BAD561FA2B7CF002E41E1 /* structs */,
+				1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -187,18 +189,22 @@
 		1C1BAD1A1FA28498002E41E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1C1BACE51FA27D44002E41E1 /* Personality.xcdatamodeld */,
+				1C1BACED1FA27D44002E41E1 /* Info.plist */,
+				1C1BACEA1FA27D44002E41E1 /* LaunchScreen.storyboard */,
+				1C1BACE21FA27D44002E41E1 /* Main.storyboard */,
 				1C1BAD1B1FA284AE002E41E1 /* personality_test.json */,
 				1C1BACE81FA27D44002E41E1 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		1C1BAD231FA29222002E41E1 /* Datamodel */ = {
+		1C1BAD561FA2B7CF002E41E1 /* structs */ = {
 			isa = PBXGroup;
 			children = (
-				1C1BACE51FA27D44002E41E1 /* Personality.xcdatamodeld */,
+				1C1BAD581FA2B7EB002E41E1 /* Category.swift */,
 			);
-			path = Datamodel;
+			path = structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,10 +346,12 @@
 			files = (
 				1C1BAD511FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */,
 				1C1BAD201FA287D6002E41E1 /* Constants.swift in Sources */,
-				1C1BACE11FA27D44002E41E1 /* ViewController.swift in Sources */,
+				1C1BACE11FA27D44002E41E1 /* CategoriesViewController.swift in Sources */,
 				1C1BAD251FA29320002E41E1 /* Coredata.swift in Sources */,
 				1C1BACDF1FA27D44002E41E1 /* AppDelegate.swift in Sources */,
+				1C1BAD591FA2B7EB002E41E1 /* Category.swift in Sources */,
 				1C1BACE71FA27D44002E41E1 /* Personality.xcdatamodeld in Sources */,
+				1C1BAD551FA2B695002E41E1 /* CategoriesViewModel.swift in Sources */,
 				1C1BAD171FA28430002E41E1 /* ImportJson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +529,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BYXYSL2PRV;
 				INFOPLIST_FILE = Personality/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = personality.br.com.Personality;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,6 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BYXYSL2PRV;
 				INFOPLIST_FILE = Personality/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = personality.br.com.Personality;
 				PRODUCT_NAME = "$(TARGET_NAME)";
