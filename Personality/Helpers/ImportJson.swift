@@ -25,11 +25,27 @@ struct ImportJson {
 				return
 			}
 			
-			guard let categories = dictionary[Constants.Json.Keys.Categories.categories] as? [String] else {
+			guard let categories = dictionary[Constants.Json.Keys.Categories.root] as? [String] else {
 				assertionFailure("No categories found")
 				return
 			}
 			
+			guard let questions = dictionary[Constants.Json.Keys.Questions.root] as? [Dictionary<String, AnyObject>] else {
+				assertionFailure("No questions found")
+				return
+			}
+			
+			categories.forEach({ (category: String) in
+				let entity = CoreDataHelper.shared.insertNewObject(entity: Categories.self)
+				entity.category = category
+			})
+			
+			questions.forEach({ (question: Dictionary<String, AnyObject>) in
+				let entity = CoreDataHelper.shared.insertNewObject(entity: Questions.self)
+				entity.setProperties(dictionary: question)
+			})
+			
+			CoreDataHelper.shared.saveContext()
 		} catch {
 			assertionFailure("An error occurred processing the file \(Constants.Json.filename)")
 		}

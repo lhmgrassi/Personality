@@ -9,9 +9,9 @@
 import UIKit
 import CoreData
 
-class CoredataHelper: NSObject {
+class CoreDataHelper: NSObject {
 
-	static let shared = CoredataHelper()
+	static let shared = CoreDataHelper()
 	
 	// MARK: - Private properties
 	
@@ -50,12 +50,20 @@ class CoredataHelper: NSObject {
 		
 		return managedObjectContext
 	}()
-
 }
 
-extension CoredataHelper {
+extension CoreDataHelper {
 	
-	// MARK: - Helper function
+	// MARK: - Helper functions
+	
+	func insertNewObject<T>(entity: T.Type) -> T where T : NSManagedObject {
+		guard let entity = NSEntityDescription.insertNewObject(forEntityName: NSStringFromClass(T.self), into: self.context) as? T else {
+			assertionFailure("It was not possible to insert the new object \(NSStringFromClass(T.self))")
+			return T()
+		}
+		
+		return entity
+	}
 	
 	func saveContext() {
 		if context.hasChanges {

@@ -20,15 +20,29 @@ struct Constants {
 		
 			struct Categories {
 				
-				static let categories = "categories"
+				static let root = "categories"
 			}
 
 			struct Questions {
 				
-				static let question = "question"
-				static let question_type = "question_type"
+				static let root 			= "questions"
+				static let question 		= "question"
+				static let category 		= "category"
+				
+				struct QuestionType {
+				
+					static let root 		= "question_type"
+					static let type 		= "type"
+					static let options 		= "options"
+				}
 			}
-
 		}
+	}
+	
+	enum QuestionType: String {
+		
+		case singleChoice 				= "single_choice"
+		case singleChoiceConditional 	= "single_choice_conditional"
+		case numberRange 				= "number_range"
 	}
 }
