@@ -17,8 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		let alreadyImportedJson = (UserDefaults.standard.object(forKey: Constants.Sandbox.alreadyImportedJson) as? Bool) ?? false
 		if !alreadyImportedJson {
-			let jsonFile = JsonFile()
-			jsonFile.importJson()
+			JsonFile().importJson()
 		}
 		
 		return true

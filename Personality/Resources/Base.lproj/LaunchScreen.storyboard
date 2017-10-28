@@ -6,15 +6,49 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController"/>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="joi-UE-FsX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_splash" translatesAutoresizingMaskIntoConstraints="NO" id="qBz-5a-idZ">
+                                <rect key="frame" x="60" y="135" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Egy-Oa-FJa"/>
+                                    <constraint firstAttribute="width" secondItem="qBz-5a-idZ" secondAttribute="height" multiplier="1:1" id="VaG-kg-TSE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QES-V1-nld">
+                                <rect key="frame" x="75" y="317.5" width="170" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30196078431372547" green="0.4823529411764706" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QES-V1-nld" firstAttribute="centerY" secondItem="joi-UE-FsX" secondAttribute="centerY" constant="55" id="ElB-yy-qfZ"/>
+                            <constraint firstItem="QES-V1-nld" firstAttribute="centerX" secondItem="joi-UE-FsX" secondAttribute="centerX" id="XXn-97-uRr"/>
+                            <constraint firstItem="QES-V1-nld" firstAttribute="top" secondItem="qBz-5a-idZ" secondAttribute="bottom" constant="-17.5" id="gP9-qd-gSu"/>
+                            <constraint firstItem="qBz-5a-idZ" firstAttribute="centerX" secondItem="joi-UE-FsX" secondAttribute="centerX" id="vMx-BN-PtN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NrH-rD-LeT"/>
+                    </view>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="50.625" y="373.94366197183098"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_splash" width="1024" height="1024"/>
+    </resources>
 </document>
