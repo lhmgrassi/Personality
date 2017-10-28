@@ -10,12 +10,18 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
 	
-	@IBOutlet private weak var categoryLabel		: UILabel!
-	@IBOutlet private weak var categoryImageView	: UIImageView!
+	@IBOutlet private weak var categoryImageView		: UIImageView!
+	@IBOutlet private weak var categoryLabel			: UILabel!
+	@IBOutlet private weak var questionsLabel			: UILabel!
+	@IBOutlet private weak var questionsAnsweredLabel	: UILabel!
 	
 	func setContent(category: CategoryProtocol) {
+		self.categoryImageView.image = category.categoryImage
 		self.categoryLabel.text = category.category
 		self.categoryLabel.textColor = category.categoryColor
-		self.categoryImageView.image = category.categoryImage
+		self.questionsLabel.text = category.questions
+		self.questionsLabel.textColor = category.categoryColor
+		self.questionsAnsweredLabel.text = category.questionsAnswered
+		self.questionsAnsweredLabel.textColor = category.categoryColor
 	}
 }

@@ -114,12 +114,34 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 1 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 3 localization keys.
     struct localizable {
+      /// en translation: %d answered
+      /// 
+      /// Locales: en
+      static let categoriesViewControllerTotalQuestionsAnswered = Rswift.StringResource(key: "categoriesViewController.totalQuestionsAnswered", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: %d questions
+      /// 
+      /// Locales: en
+      static let categoriesViewControllerTotalQuestions = Rswift.StringResource(key: "categoriesViewController.totalQuestions", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Categories
       /// 
       /// Locales: en
       static let categoriesViewControllerTitle = Rswift.StringResource(key: "categoriesViewController.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      
+      /// en translation: %d answered
+      /// 
+      /// Locales: en
+      static func categoriesViewControllerTotalQuestionsAnswered(_ value1: Int) -> String {
+        return String(format: NSLocalizedString("categoriesViewController.totalQuestionsAnswered", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
+      
+      /// en translation: %d questions
+      /// 
+      /// Locales: en
+      static func categoriesViewControllerTotalQuestions(_ value1: Int) -> String {
+        return String(format: NSLocalizedString("categoriesViewController.totalQuestions", bundle: R.hostingBundle, comment: ""), locale: R.applicationLocale, value1)
+      }
       
       /// en translation: Categories
       /// 

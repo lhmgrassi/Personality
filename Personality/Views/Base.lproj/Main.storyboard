@@ -22,28 +22,40 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="EXs-iM-qoU">
-                                    <size key="itemSize" width="144" height="177"/>
+                                    <size key="itemSize" width="181" height="205"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCellIdentifier" id="WeM-8R-a6g" customClass="CategoryCollectionViewCell" customModule="Personality" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="144" height="177"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="205"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="144" height="177"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ON5-3o-VPF">
-                                                    <rect key="frame" x="16" y="15" width="112" height="162"/>
+                                                    <rect key="frame" x="16" y="15" width="149" height="190"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category1" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-ig-4FG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="112" height="162"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="149" height="190"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whx-CX-thi">
-                                                            <rect key="frame" x="0.0" y="70.5" width="112" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="82" width="149" height="26.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="questions" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO9-9d-EBe">
+                                                            <rect key="frame" x="4" y="149" width="133" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="questions" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zra-FF-SGR">
+                                                            <rect key="frame" x="4" y="163.5" width="133" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -52,9 +64,15 @@
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="whx-CX-thi" secondAttribute="trailing" id="6gK-m3-05Z"/>
                                                         <constraint firstItem="whx-CX-thi" firstAttribute="leading" secondItem="ON5-3o-VPF" secondAttribute="leading" id="6zP-Jc-xl2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Zra-FF-SGR" secondAttribute="bottom" constant="12" id="9hD-S9-c1S"/>
                                                         <constraint firstItem="TfP-ig-4FG" firstAttribute="leading" secondItem="ON5-3o-VPF" secondAttribute="leading" id="ECT-NQ-XMi"/>
+                                                        <constraint firstItem="Zra-FF-SGR" firstAttribute="leading" secondItem="lO9-9d-EBe" secondAttribute="leading" id="Gci-1S-l35"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lO9-9d-EBe" secondAttribute="trailing" constant="12" id="SgL-lw-AQQ"/>
                                                         <constraint firstAttribute="bottom" secondItem="TfP-ig-4FG" secondAttribute="bottom" id="XWw-p3-UBL"/>
+                                                        <constraint firstItem="Zra-FF-SGR" firstAttribute="trailing" secondItem="lO9-9d-EBe" secondAttribute="trailing" id="gf4-lE-f4b"/>
+                                                        <constraint firstItem="Zra-FF-SGR" firstAttribute="top" secondItem="lO9-9d-EBe" secondAttribute="bottom" id="j5o-NZ-3uM"/>
                                                         <constraint firstAttribute="trailing" secondItem="TfP-ig-4FG" secondAttribute="trailing" id="riw-i0-9Ux"/>
+                                                        <constraint firstItem="lO9-9d-EBe" firstAttribute="leading" secondItem="ON5-3o-VPF" secondAttribute="leading" constant="4" id="sPD-jd-e7A"/>
                                                         <constraint firstItem="TfP-ig-4FG" firstAttribute="top" secondItem="ON5-3o-VPF" secondAttribute="top" id="xQq-h7-wpl"/>
                                                         <constraint firstItem="whx-CX-thi" firstAttribute="centerY" secondItem="ON5-3o-VPF" secondAttribute="centerY" id="xUP-Ad-ThH"/>
                                                     </constraints>
@@ -67,9 +85,12 @@
                                             <constraint firstItem="ON5-3o-VPF" firstAttribute="leading" secondItem="WeM-8R-a6g" secondAttribute="leading" constant="16" id="pvD-Gs-s05"/>
                                             <constraint firstItem="ON5-3o-VPF" firstAttribute="top" secondItem="WeM-8R-a6g" secondAttribute="top" constant="15" id="tg7-Cf-pzW"/>
                                         </constraints>
+                                        <size key="customSize" width="181" height="205"/>
                                         <connections>
                                             <outlet property="categoryImageView" destination="TfP-ig-4FG" id="9p2-ns-Vul"/>
                                             <outlet property="categoryLabel" destination="whx-CX-thi" id="GUy-m9-WXI"/>
+                                            <outlet property="questionsAnsweredLabel" destination="Zra-FF-SGR" id="uKp-QF-QYy"/>
+                                            <outlet property="questionsLabel" destination="lO9-9d-EBe" id="dxB-XF-7vW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -95,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkP-H1-zhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615" y="88"/>
+            <point key="canvasLocation" x="613.60000000000002" y="87.706146926536732"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K9d-0p-n7S">

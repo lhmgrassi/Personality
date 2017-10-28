@@ -9,6 +9,7 @@
         <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Questions" inverseName="options" inverseEntity="Questions" syncable="YES"/>
     </entity>
     <entity name="Questions" representedClassName="Questions" syncable="YES" codeGenerationType="class">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categories" inverseName="questions" inverseEntity="Categories" syncable="YES"/>
@@ -17,6 +18,6 @@
     <elements>
         <element name="Categories" positionX="-54" positionY="-9" width="128" height="75"/>
         <element name="Options" positionX="-18" positionY="27" width="128" height="75"/>
-        <element name="Questions" positionX="-36" positionY="9" width="128" height="105"/>
+        <element name="Questions" positionX="-36" positionY="9" width="128" height="120"/>
     </elements>
 </model>

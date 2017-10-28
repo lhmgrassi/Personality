@@ -50,7 +50,7 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		
-		return CGSize(width: UIScreen.main.bounds.width/2, height: 160)
+		return CGSize(width: UIScreen.main.bounds.width/2, height: Constants.Category.cellHeight)
 	}
 	
 }

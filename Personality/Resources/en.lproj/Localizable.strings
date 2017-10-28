@@ -7,3 +7,5 @@
 */
 
 "categoriesViewController.title" = "Categories";
+"categoriesViewController.totalQuestions" = "%d questions";
+"categoriesViewController.totalQuestionsAnswered" = "%d answered";
