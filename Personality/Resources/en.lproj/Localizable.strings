@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Personality
+
+  Created by Luis Henrique Grassi on 28/10/17.
+  Copyright © 2017 lhmgrassi. All rights reserved.
+*/
+
+"categoriesViewController.title" = "Categories";

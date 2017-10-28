@@ -1,0 +1,6 @@
+framework module Pods_Personality {
+  umbrella header "Pods-Personality-umbrella.h"
+
+  export *
+  module * { export * }
+}
