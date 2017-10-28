@@ -18,9 +18,9 @@
 		1C1BACEC1FA27D44002E41E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BACEA1FA27D44002E41E1 /* LaunchScreen.storyboard */; };
 		1C1BACF71FA27D44002E41E1 /* PersonalityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BACF61FA27D44002E41E1 /* PersonalityTests.swift */; };
 		1C1BAD021FA27D44002E41E1 /* PersonalityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD011FA27D44002E41E1 /* PersonalityUITests.swift */; };
-		1C1BAD171FA28430002E41E1 /* ImportJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* ImportJson.swift */; };
-		1C1BAD181FA28430002E41E1 /* ImportJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* ImportJson.swift */; };
-		1C1BAD191FA28430002E41E1 /* ImportJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* ImportJson.swift */; };
+		1C1BAD171FA28430002E41E1 /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* JsonFile.swift */; };
+		1C1BAD181FA28430002E41E1 /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* JsonFile.swift */; };
+		1C1BAD191FA28430002E41E1 /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* JsonFile.swift */; };
 		1C1BAD1C1FA284AE002E41E1 /* personality_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1B1FA284AE002E41E1 /* personality_test.json */; };
 		1C1BAD1D1FA284AE002E41E1 /* personality_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1B1FA284AE002E41E1 /* personality_test.json */; };
 		1C1BAD1E1FA284AE002E41E1 /* personality_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1B1FA284AE002E41E1 /* personality_test.json */; };
@@ -73,7 +73,7 @@
 		1C1BACFD1FA27D44002E41E1 /* PersonalityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C1BAD011FA27D44002E41E1 /* PersonalityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityUITests.swift; sourceTree = "<group>"; };
 		1C1BAD031FA27D44002E41E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C1BAD161FA28430002E41E1 /* ImportJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportJson.swift; sourceTree = "<group>"; };
+		1C1BAD161FA28430002E41E1 /* JsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFile.swift; sourceTree = "<group>"; };
 		1C1BAD1B1FA284AE002E41E1 /* personality_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = personality_test.json; path = "../../../../../Downloads/coding_exercises_options-master/personality_test/database/personality_test.json"; sourceTree = "<group>"; };
 		1C1BAD1F1FA287D6002E41E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1C1BAD241FA29320002E41E1 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 		1C1BAD151FA283FC002E41E1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1C1BAD161FA28430002E41E1 /* ImportJson.swift */,
+				1C1BAD161FA28430002E41E1 /* JsonFile.swift */,
 				1C1BAD1F1FA287D6002E41E1 /* Constants.swift */,
 				1C1BAD241FA29320002E41E1 /* CoreDataHelper.swift */,
 			);
@@ -480,7 +480,7 @@
 				1C1BACE71FA27D44002E41E1 /* Personality.xcdatamodeld in Sources */,
 				1C1BAD551FA2B695002E41E1 /* CategoriesViewModel.swift in Sources */,
 				1C0623D31FA4B9EF007A5665 /* R.generated.swift in Sources */,
-				1C1BAD171FA28430002E41E1 /* ImportJson.swift in Sources */,
+				1C1BAD171FA28430002E41E1 /* JsonFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,7 +491,7 @@
 				1C1BAD261FA29320002E41E1 /* CoreDataHelper.swift in Sources */,
 				1C1BAD521FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */,
 				1C1BACF71FA27D44002E41E1 /* PersonalityTests.swift in Sources */,
-				1C1BAD181FA28430002E41E1 /* ImportJson.swift in Sources */,
+				1C1BAD181FA28430002E41E1 /* JsonFile.swift in Sources */,
 				1C1BAD211FA287D6002E41E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,7 +503,7 @@
 				1C1BAD271FA29320002E41E1 /* CoreDataHelper.swift in Sources */,
 				1C1BAD531FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */,
 				1C1BAD021FA27D44002E41E1 /* PersonalityUITests.swift in Sources */,
-				1C1BAD191FA28430002E41E1 /* ImportJson.swift in Sources */,
+				1C1BAD191FA28430002E41E1 /* JsonFile.swift in Sources */,
 				1C1BAD221FA287D6002E41E1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

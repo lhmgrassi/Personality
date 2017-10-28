@@ -1,5 +1,5 @@
 //
-//  ImportJson
+//  JsonFile
 //  Personality
 //
 //  Created by Luis Henrique Grassi on 26/10/17.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-struct ImportJson {
+struct JsonFile {
 	
-	func importJson() {
+	func importJson(withFilename filename: String = Constants.Json.filename) {
 		guard let path = Bundle.main.path(forResource: Constants.Json.filename, ofType: "json") else {
 			assertionFailure("It was not possible to read the file \(Constants.Json.filename)")
 			return
@@ -44,8 +44,10 @@ struct ImportJson {
 				let entity = CoreDataHelper.shared.insertNewObject(entity: Questions.self)
 				entity.setProperties(dictionary: question)
 			})
-			
-			CoreDataHelper.shared.saveContext()
+						
+			if CoreDataHelper.shared.saveContext() {
+				UserDefaults.standard.set(true, forKey: Constants.Sandbox.alreadyImportedJson)
+			}
 		} catch {
 			assertionFailure("An error occurred processing the file \(Constants.Json.filename)")
 		}

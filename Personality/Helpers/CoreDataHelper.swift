@@ -91,13 +91,16 @@ extension CoreDataHelper {
 	
 	// MARK: - Save
 	
-	func saveContext() {
+	func saveContext() -> Bool {
 		if context.hasChanges {
 			do {
 				try context.save()
 			} catch {
 				assertionFailure("Unresolved error")
+				return false
 			}
 		}
+		
+		return true
 	}
 }
