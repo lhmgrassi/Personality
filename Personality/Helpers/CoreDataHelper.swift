@@ -54,7 +54,7 @@ class CoreDataHelper: NSObject {
 
 extension CoreDataHelper {
 	
-	// MARK: - Helper functions
+	// MARK: - Fetch
 	
 	func fetch<T>(fetchRequest: NSFetchRequest<NSFetchRequestResult>, forEntity: T.Type) -> [T]? where T: NSManagedObject {
 		do {
@@ -78,6 +78,8 @@ extension CoreDataHelper {
 		return self.fetch(fetchRequest: fetchRequest, forEntity: entity)
 	}
 	
+	// MARK: - Insert
+	
 	func insertNewObject<T>(entity: T.Type) -> T where T : NSManagedObject {
 		guard let entity = NSEntityDescription.insertNewObject(forEntityName: NSStringFromClass(T.self), into: self.context) as? T else {
 			assertionFailure("It was not possible to insert the new object \(NSStringFromClass(T.self))")
@@ -86,6 +88,8 @@ extension CoreDataHelper {
 		
 		return entity
 	}
+	
+	// MARK: - Save
 	
 	func saveContext() {
 		if context.hasChanges {

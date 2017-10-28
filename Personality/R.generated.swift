@@ -82,7 +82,7 @@ struct R: Rswift.Validatable {
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `CategoryCollectionViewCellIdentifier`.
-    static let categoryCollectionViewCellIdentifier: Rswift.ReuseIdentifier<UIKit.UIView> = Rswift.ReuseIdentifier(identifier: "CategoryCollectionViewCellIdentifier")
+    static let categoryCollectionViewCellIdentifier: Rswift.ReuseIdentifier<CategoryCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "CategoryCollectionViewCellIdentifier")
     
     fileprivate init() {}
   }

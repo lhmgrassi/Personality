@@ -20,17 +20,17 @@ struct ImportJson {
 			let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
 			let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
 			
-			guard let dictionary = jsonResult as? Dictionary<String, AnyObject> else {
+			guard let dataDictionary = jsonResult as? Dictionary<String, AnyObject> else {
 				assertionFailure("It was not possible to read the file \(Constants.Json.filename)")
 				return
 			}
 			
-			guard let categories = dictionary[Constants.Json.Keys.Categories.root] as? [String] else {
+			guard let categories = dataDictionary[Constants.Json.Keys.Categories.root] as? [String] else {
 				assertionFailure("No categories found")
 				return
 			}
 			
-			guard let questions = dictionary[Constants.Json.Keys.Questions.root] as? [Dictionary<String, AnyObject>] else {
+			guard let questions = dataDictionary[Constants.Json.Keys.Questions.root] as? [Dictionary<String, AnyObject>] else {
 				assertionFailure("No questions found")
 				return
 			}

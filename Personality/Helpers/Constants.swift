@@ -45,4 +45,10 @@ struct Constants {
 		case singleChoiceConditional 	= "single_choice_conditional"
 		case numberRange 				= "number_range"
 	}
+	
+	struct Category {
+		
+		static let images = [#imageLiteral(resourceName: "category4"), #imageLiteral(resourceName: "category1"), #imageLiteral(resourceName: "category2"), #imageLiteral(resourceName: "category3")]
+		static let colors = [#colorLiteral(red: 1, green: 0.6156862745, blue: 0.2666666667, alpha: 1), #colorLiteral(red: 0.05882352941, green: 0.2784313725, blue: 0.5333333333, alpha: 1), #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), #colorLiteral(red: 1, green: 0.9490196078, blue: 0.3058823529, alpha: 1)]
+	}
 }

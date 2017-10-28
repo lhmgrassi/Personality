@@ -10,17 +10,19 @@ import UIKit
 import CoreData
 
 protocol CategoriesViewModelProtocol : class {
-	var categories: [Category] { get set }
+	
+	var categories: [CategoryProtocol] { get set }
 }
 
 class CategoriesViewModel : CategoriesViewModelProtocol {
 
-	var categories: [Category] = []
+	var categories: [CategoryProtocol] = []
 	
 	init() {
 		let categoriesModel = CoreDataHelper.shared.getAllObjects(for: Categories.self)
-		categoriesModel?.forEach({ (category) in
-			categories.append(Category.init(with: category))
-		})
+		for (index, categoryModel) in (categoriesModel?.enumerated())! {
+			let category = Category.init(withEntity: categoryModel, forIndex: index)
+			categories.append(category)
+		}
 	}
 }

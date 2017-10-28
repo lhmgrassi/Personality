@@ -27,9 +27,9 @@
 		1C1BAD201FA287D6002E41E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1F1FA287D6002E41E1 /* Constants.swift */; };
 		1C1BAD211FA287D6002E41E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1F1FA287D6002E41E1 /* Constants.swift */; };
 		1C1BAD221FA287D6002E41E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1F1FA287D6002E41E1 /* Constants.swift */; };
-		1C1BAD251FA29320002E41E1 /* Coredata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD241FA29320002E41E1 /* Coredata.swift */; };
-		1C1BAD261FA29320002E41E1 /* Coredata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD241FA29320002E41E1 /* Coredata.swift */; };
-		1C1BAD271FA29320002E41E1 /* Coredata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD241FA29320002E41E1 /* Coredata.swift */; };
+		1C1BAD251FA29320002E41E1 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD241FA29320002E41E1 /* CoreDataHelper.swift */; };
+		1C1BAD261FA29320002E41E1 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD241FA29320002E41E1 /* CoreDataHelper.swift */; };
+		1C1BAD271FA29320002E41E1 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD241FA29320002E41E1 /* CoreDataHelper.swift */; };
 		1C1BAD511FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */; };
 		1C1BAD521FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */; };
 		1C1BAD531FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */; };
@@ -76,7 +76,7 @@
 		1C1BAD161FA28430002E41E1 /* ImportJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportJson.swift; sourceTree = "<group>"; };
 		1C1BAD1B1FA284AE002E41E1 /* personality_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = personality_test.json; path = "../../../../../Downloads/coding_exercises_options-master/personality_test/database/personality_test.json"; sourceTree = "<group>"; };
 		1C1BAD1F1FA287D6002E41E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1C1BAD241FA29320002E41E1 /* Coredata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coredata.swift; sourceTree = "<group>"; };
+		1C1BAD241FA29320002E41E1 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questions+Helper.swift"; sourceTree = "<group>"; };
 		1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		1C1BAD581FA2B7EB002E41E1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 			children = (
 				1C1BAD161FA28430002E41E1 /* ImportJson.swift */,
 				1C1BAD1F1FA287D6002E41E1 /* Constants.swift */,
-				1C1BAD241FA29320002E41E1 /* Coredata.swift */,
+				1C1BAD241FA29320002E41E1 /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -473,7 +473,7 @@
 				1C1BAD511FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */,
 				1C1BAD201FA287D6002E41E1 /* Constants.swift in Sources */,
 				1C1BACE11FA27D44002E41E1 /* CategoriesViewController.swift in Sources */,
-				1C1BAD251FA29320002E41E1 /* Coredata.swift in Sources */,
+				1C1BAD251FA29320002E41E1 /* CoreDataHelper.swift in Sources */,
 				1C1BACDF1FA27D44002E41E1 /* AppDelegate.swift in Sources */,
 				1C1BAD591FA2B7EB002E41E1 /* Category.swift in Sources */,
 				1C0623CD1FA2C68D007A5665 /* CategoryCollectionViewCell.swift in Sources */,
@@ -488,7 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1BAD261FA29320002E41E1 /* Coredata.swift in Sources */,
+				1C1BAD261FA29320002E41E1 /* CoreDataHelper.swift in Sources */,
 				1C1BAD521FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */,
 				1C1BACF71FA27D44002E41E1 /* PersonalityTests.swift in Sources */,
 				1C1BAD181FA28430002E41E1 /* ImportJson.swift in Sources */,
@@ -500,7 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1BAD271FA29320002E41E1 /* Coredata.swift in Sources */,
+				1C1BAD271FA29320002E41E1 /* CoreDataHelper.swift in Sources */,
 				1C1BAD531FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */,
 				1C1BAD021FA27D44002E41E1 /* PersonalityUITests.swift in Sources */,
 				1C1BAD191FA28430002E41E1 /* ImportJson.swift in Sources */,
