@@ -10,6 +10,9 @@
 		1C0623CD1FA2C68D007A5665 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0623CC1FA2C68D007A5665 /* CategoryCollectionViewCell.swift */; };
 		1C0623D31FA4B9EF007A5665 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0623D21FA4B9EF007A5665 /* R.generated.swift */; };
 		1C0623D81FA4BDC8007A5665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C0623DA1FA4BDC8007A5665 /* Localizable.strings */; };
+		1C0623DC1FA6031B007A5665 /* Questions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0623DB1FA6031B007A5665 /* Questions.storyboard */; };
+		1C0623DE1FA606E7007A5665 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0623DD1FA606E7007A5665 /* QuestionViewController.swift */; };
+		1C0623E01FA606FA007A5665 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0623DF1FA606FA007A5665 /* QuestionViewModel.swift */; };
 		1C1BACDF1FA27D44002E41E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BACDE1FA27D44002E41E1 /* AppDelegate.swift */; };
 		1C1BACE11FA27D44002E41E1 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BACE01FA27D44002E41E1 /* CategoriesViewController.swift */; };
 		1C1BACE41FA27D44002E41E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BACE21FA27D44002E41E1 /* Main.storyboard */; };
@@ -59,6 +62,9 @@
 		1C0623CC1FA2C68D007A5665 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C0623D21FA4B9EF007A5665 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Personality/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		1C0623D91FA4BDC8007A5665 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1C0623DB1FA6031B007A5665 /* Questions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Questions.storyboard; sourceTree = "<group>"; };
+		1C0623DD1FA606E7007A5665 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		1C0623DF1FA606FA007A5665 /* QuestionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		1C1BACDB1FA27D44002E41E1 /* Personality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Personality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C1BACDE1FA27D44002E41E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C1BACE01FA27D44002E41E1 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				1C1BACE01FA27D44002E41E1 /* CategoriesViewController.swift */,
+				1C0623DD1FA606E7007A5665 /* QuestionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 			children = (
 				1C1BACE21FA27D44002E41E1 /* Main.storyboard */,
 				1C0623CB1FA2C679007A5665 /* Cells */,
+				1C0623DB1FA6031B007A5665 /* Questions.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 			children = (
 				1C1BAD561FA2B7CF002E41E1 /* structs */,
 				1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */,
+				1C0623DF1FA606FA007A5665 /* QuestionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -373,6 +382,7 @@
 			files = (
 				1C0623D81FA4BDC8007A5665 /* Localizable.strings in Resources */,
 				1C1BACEC1FA27D44002E41E1 /* LaunchScreen.storyboard in Resources */,
+				1C0623DC1FA6031B007A5665 /* Questions.storyboard in Resources */,
 				1C1BACE91FA27D44002E41E1 /* Assets.xcassets in Resources */,
 				1C1BAD1C1FA284AE002E41E1 /* personality_test.json in Resources */,
 				1C1BACE41FA27D44002E41E1 /* Main.storyboard in Resources */,
@@ -472,6 +482,7 @@
 			files = (
 				1C1BAD511FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */,
 				1C1BAD201FA287D6002E41E1 /* Constants.swift in Sources */,
+				1C0623DE1FA606E7007A5665 /* QuestionViewController.swift in Sources */,
 				1C1BACE11FA27D44002E41E1 /* CategoriesViewController.swift in Sources */,
 				1C1BAD251FA29320002E41E1 /* CoreDataHelper.swift in Sources */,
 				1C1BACDF1FA27D44002E41E1 /* AppDelegate.swift in Sources */,
@@ -479,6 +490,7 @@
 				1C0623CD1FA2C68D007A5665 /* CategoryCollectionViewCell.swift in Sources */,
 				1C1BACE71FA27D44002E41E1 /* Personality.xcdatamodeld in Sources */,
 				1C1BAD551FA2B695002E41E1 /* CategoriesViewModel.swift in Sources */,
+				1C0623E01FA606FA007A5665 /* QuestionViewModel.swift in Sources */,
 				1C0623D31FA4B9EF007A5665 /* R.generated.swift in Sources */,
 				1C1BAD171FA28430002E41E1 /* JsonFile.swift in Sources */,
 			);

@@ -91,6 +91,7 @@
                                             <outlet property="categoryLabel" destination="whx-CX-thi" id="GUy-m9-WXI"/>
                                             <outlet property="questionsAnsweredLabel" destination="Zra-FF-SGR" id="uKp-QF-QYy"/>
                                             <outlet property="questionsLabel" destination="lO9-9d-EBe" id="dxB-XF-7vW"/>
+                                            <segue destination="2Bn-O3-tHN" kind="show" id="Rt7-gO-sum"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -117,6 +118,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkP-H1-zhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="613.60000000000002" y="87.706146926536732"/>
+        </scene>
+        <!--Questions-->
+        <scene sceneID="pkD-lR-21N">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Questions" id="2Bn-O3-tHN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsU-le-4CU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K9d-0p-n7S">
