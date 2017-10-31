@@ -20,7 +20,7 @@ class QuestionViewController: UIViewController {
 	@IBOutlet private weak var finishBarButtonItem			: UIBarButtonItem!
 	
 	// MARK: - Public properties
-
+	
 	var viewModel: QuestionViewModelProtocol!
 	
 	// MARK: - Lifecycle
@@ -29,6 +29,8 @@ class QuestionViewController: UIViewController {
 		super.viewDidLoad()
 		
 		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+		
+		assert(self.viewModel != nil, "ViewModel should not be nil")
 		
 		self.title = self.viewModel.question?.category.category
 		self.finishBarButtonItem.title = R.string.localizable.finish()
@@ -41,6 +43,13 @@ class QuestionViewController: UIViewController {
 		if 	identifier == R.segue.questionViewController.goToNextQuestion.identifier,
 			let row = self.tableView.indexPathForSelectedRow?.row {
 				self.viewModel.updateEntity(forIndex: row)
+			
+				if 	let conditionalAnswer = self.viewModel.question?.conditionalAnswer,
+					let answer = self.viewModel.question?.answer,
+					conditionalAnswer == answer {
+						self.performSegue(withIdentifier: R.segue.questionViewController.goToConditionalQuestionViewController.identifier, sender: nil)
+						return false
+				}
 		}
 		
 		if identifier == R.segue.questionViewController.goToNextQuestion.identifier || identifier == R.segue.questionViewController.skipCurrentQuestion.identifier {
@@ -65,11 +74,11 @@ class QuestionViewController: UIViewController {
 		self.dismiss(animated: true, completion: nil)
 	}
 	
-	private func didSelectedAnswer() {
+	private func didSelectAnswer() {
 		self.nextQuestionButton.isUserInteractionEnabled = true
 		self.nextQuestionImageView.image = R.image.ic_ios_blue()
 	}
-
+	
 	// MARK: - IBAction
 	
 	@IBAction private func finishedTapped(_ sender: Any) {
@@ -90,26 +99,34 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
 			assertionFailure("It was not possible to dequeue the cell.")
 			return UITableViewCell()
 		}
-
+		
 		guard let question = self.viewModel.question else {
 			assertionFailure("Question can not be nil.")
 			return UITableViewCell()
 		}
-
+		
 		let option = question.options[indexPath.row]
 		
 		cell.setContent(with: option)
 		
 		if option.option == question.answer {
 			self.tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-			self.didSelectedAnswer()
+			self.didSelectAnswer()
 		}
 		
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		self.didSelectedAnswer()
+		self.didSelectAnswer()
 	}
 }
 
+extension QuestionViewController: ConditionalQuestionViewControllerDelegate {
+	
+	func didSelectConditionalAnswer() {
+		DispatchQueue.main.async {
+			self.performSegue(withIdentifier: R.segue.questionViewController.goToNextQuestion, sender: nil)
+		}
+	}
+}

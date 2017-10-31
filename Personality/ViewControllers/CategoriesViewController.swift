@@ -36,7 +36,7 @@ class CategoriesViewController: UIViewController {
 		
 		self.collectionView.reloadData()
 	}
-	
+
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if 	segue.identifier == R.segue.categoriesViewController.goToQuestions.identifier,
 			let questionNavigationViewController = segue.destination as? UINavigationController,

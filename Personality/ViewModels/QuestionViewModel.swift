@@ -35,7 +35,7 @@ struct QuestionViewModel : QuestionViewModelProtocol {
 	private var dbQuestion		: DBQuestions!
 	
 	init?(withQuestionIndex index: Int, andCategory category: CategoryProtocol) {
-		let predicate = NSPredicate(format: "category.category == %@", category.category)
+		let predicate = NSPredicate(format: "category.category == %@ && parent == nil", category.category)
 		let dbQuestions = CoreDataHelper.shared.get(for: DBQuestions.self, withPredicate: predicate)
 		
 		self.questionsCount = category.questionsCount

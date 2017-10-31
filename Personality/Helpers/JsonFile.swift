@@ -40,11 +40,13 @@ struct JsonFile {
 				entity.category = category
 			})
 			
-			questions.forEach({ (question: Dictionary<String, AnyObject>) in
+			for question in questions {
 				let entity = CoreDataHelper.shared.insertNewObject(entity: DBQuestions.self)
-				entity.setProperties(dictionary: question)
-			})
-						
+				if !entity.setProperties(dictionary: question) {
+					return
+				}
+			}
+			
 			if CoreDataHelper.shared.saveContext() {
 				UserDefaults.standard.set(true, forKey: Constants.Sandbox.alreadyImportedJson)
 			}

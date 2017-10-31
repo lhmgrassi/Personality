@@ -41,6 +41,7 @@
 		1C1BAD531FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */; };
 		1C1BAD551FA2B695002E41E1 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */; };
 		1C1BAD591FA2B7EB002E41E1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD581FA2B7EB002E41E1 /* Category.swift */; };
+		1C5FDA491FA90CD800973CFA /* ConditionalQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5FDA481FA90CD800973CFA /* ConditionalQuestionViewController.swift */; };
 		CCD82AFB6F76E2AD5A9E106B /* Pods_Personality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E234BFBC15532C5FB71F846 /* Pods_Personality.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questions+Helper.swift"; sourceTree = "<group>"; };
 		1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		1C1BAD581FA2B7EB002E41E1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1C5FDA481FA90CD800973CFA /* ConditionalQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalQuestionViewController.swift; sourceTree = "<group>"; };
 		1FDF2E4DC07C22AED77B3ED9 /* Pods-Personality.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personality.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personality/Pods-Personality.release.xcconfig"; sourceTree = "<group>"; };
 		4F0784955BECD342FA21A4CB /* Pods_PersonalityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E234BFBC15532C5FB71F846 /* Pods_Personality.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personality.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			children = (
 				1C1BACE01FA27D44002E41E1 /* CategoriesViewController.swift */,
 				1C0623DD1FA606E7007A5665 /* QuestionViewController.swift */,
+				1C5FDA481FA90CD800973CFA /* ConditionalQuestionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				1C1BAD511FA2A1F4002E41E1 /* Questions+Helper.swift in Sources */,
 				1C1BAD201FA287D6002E41E1 /* Constants.swift in Sources */,
 				1C0623E21FA60F52007A5665 /* QuestionTableViewCell.swift in Sources */,
+				1C5FDA491FA90CD800973CFA /* ConditionalQuestionViewController.swift in Sources */,
 				1C0623DE1FA606E7007A5665 /* QuestionViewController.swift in Sources */,
 				1C1BACE11FA27D44002E41E1 /* CategoriesViewController.swift in Sources */,
 				1C1BAD251FA29320002E41E1 /* CoreDataHelper.swift in Sources */,

@@ -10,14 +10,18 @@
     </entity>
     <entity name="DBQuestions" representedClassName="DBQuestions" syncable="YES" codeGenerationType="class">
         <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="conditionalAnswer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maxRange" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minRange" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBCategories" inverseName="questions" inverseEntity="DBCategories" syncable="YES"/>
         <relationship name="options" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DBOptions" inverseName="question" inverseEntity="DBOptions" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBQuestions" inverseName="parent" inverseEntity="DBQuestions" syncable="YES"/>
     </entity>
     <elements>
         <element name="DBCategories" positionX="-54" positionY="-9" width="128" height="75"/>
         <element name="DBOptions" positionX="-18" positionY="27" width="128" height="75"/>
-        <element name="DBQuestions" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="DBQuestions" positionX="-36" positionY="9" width="128" height="180"/>
     </elements>
 </model>

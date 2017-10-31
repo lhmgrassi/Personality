@@ -134,12 +134,21 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This struct is generated for `QuestionViewController`, and contains static references to 2 segues.
+    /// This struct is generated for `QuestionViewController`, and contains static references to 3 segues.
     struct questionViewController {
+      /// Segue identifier `goToConditionalQuestionViewController`.
+      static let goToConditionalQuestionViewController: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, QuestionViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "goToConditionalQuestionViewController")
       /// Segue identifier `goToNextQuestion`.
       static let goToNextQuestion: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, QuestionViewController, QuestionViewController> = Rswift.StoryboardSegueIdentifier(identifier: "goToNextQuestion")
       /// Segue identifier `skipCurrentQuestion`.
       static let skipCurrentQuestion: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, QuestionViewController, QuestionViewController> = Rswift.StoryboardSegueIdentifier(identifier: "skipCurrentQuestion")
+      
+      /// Optionally returns a typed version of segue `goToConditionalQuestionViewController`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func goToConditionalQuestionViewController(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, QuestionViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.questionViewController.goToConditionalQuestionViewController, segue: segue)
+      }
       
       /// Optionally returns a typed version of segue `goToNextQuestion`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
@@ -318,6 +327,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "check") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'check' is used in storyboard 'Questions', but couldn't be loaded.") }
         if UIKit.UIImage(named: "ic_ios_gray") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_ios_gray' is used in storyboard 'Questions', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "ic_ios_blue") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_ios_blue' is used in storyboard 'Questions', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

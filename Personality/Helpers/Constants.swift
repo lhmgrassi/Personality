@@ -36,11 +36,26 @@ struct Constants {
 				
 				struct QuestionType {
 				
-					static let root 		= "question_type"
+					static let root 				= "question_type"
+					static let condition 			= "condition"
+					static let predicate 			= "predicate"
+					static let exactEquals 			= "exactEquals"
+					static let selection 			= "${selection}"
+					static let selectionCondition  	= "if_positive"
+					
 					static let type 		= "type"
 					static let options 		= "options"
+					static let range 		= "range"
+					static let maxRange 	= "to"
+					static let minRange 	= "from"
 				}
 			}
+		}
+		
+		enum QuestionTypes : String {
+			case singleChoice 				= "single_choice"
+			case singleChoiceConditional 	= "single_choice_conditional"
+			case numberRange 				= "number_range"
 		}
 	}
 	
