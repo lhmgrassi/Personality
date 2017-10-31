@@ -17,6 +17,8 @@ protocol CategoriesViewModelProtocol {
 
 struct CategoriesViewModel : CategoriesViewModelProtocol {
 
+	// Mark: - Public properties
+	
 	var nextQuestionIndex = 0
 	var categories: [CategoryProtocol] = []
 	

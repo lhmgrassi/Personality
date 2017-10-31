@@ -38,6 +38,10 @@ class QuestionViewController: UIViewController {
 	}
 	
 	override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+		if identifier == R.segue.questionViewController.goToNextQuestion.identifier {
+			self.viewModel.updateEntity(forIndex: self.tableView.indexPathForSelectedRow!.row)
+		}
+		
 		if identifier == R.segue.questionViewController.goToNextQuestion.identifier || identifier == R.segue.questionViewController.skipCurrentQuestion.identifier {
 			if !self.viewModel.hasNextQuestion {
 				self.dismissViewController()

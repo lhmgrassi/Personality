@@ -15,16 +15,24 @@ protocol QuestionViewModelProtocol {
 	var questionsCount			: Int { get set }
 	var currentQuestionIndex	: Int { get set }
 	var question				: QuestionProtocol? { get set }
+	
+	func updateEntity(forIndex index: Int)
 }
 
 struct QuestionViewModel : QuestionViewModelProtocol {
 
+	// Mark: - Public properties
+	
 	var questionsCount			: Int
 	var currentQuestionIndex 	: Int
 	var question				: QuestionProtocol?
 	var hasNextQuestion 		: Bool {
 		return self.questionsCount > (currentQuestionIndex + 1)
 	}
+	
+	// Mark: - Private properties
+	
+	private var dbQuestion		: DBQuestions!
 	
 	init?(withQuestionIndex index: Int, andCategory category: CategoryProtocol) {
 		let predicate = NSPredicate(format: "category.category == %@", category.category)
@@ -39,6 +47,15 @@ struct QuestionViewModel : QuestionViewModelProtocol {
 				return nil
 		}
 		
-		self.question = Question(withEntity: questions[index], withCategory: category)
+		self.dbQuestion = questions[index]
+		self.question = Question(withEntity: self.dbQuestion, withCategory: category)
+	}
+	
+	func updateEntity(forIndex index: Int) {
+		let option = self.question?.options[index]
+		self.dbQuestion.answer = option?.option
+		if !CoreDataHelper.shared.saveContext() {
+			assertionFailure("It was not possible to save the object.")
+		}
 	}
 }
