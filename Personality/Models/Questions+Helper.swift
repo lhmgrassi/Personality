@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-extension Questions {
+extension DBQuestions {
 
 	func setProperties(dictionary: Dictionary<String, AnyObject>) {
 		
@@ -25,7 +25,7 @@ extension Questions {
 		let categoryString = dictionary[Constants.Json.Keys.Questions.category] as? String ?? ""
 		let predicate = NSPredicate(format: "category == %@", categoryString)
 		
-		guard let category = CoreDataHelper.shared.get(for: Categories.self, withPredicate: predicate) else {
+		guard let category = CoreDataHelper.shared.get(for: DBCategories.self, withPredicate: predicate) else {
 			assertionFailure("It was not possible to find the category")
 			return
 		}
@@ -38,7 +38,7 @@ extension Questions {
 		}
 		
 		options.forEach { (option: String) in
-			let entity = CoreDataHelper.shared.insertNewObject(entity: Options.self)
+			let entity = CoreDataHelper.shared.insertNewObject(entity: DBOptions.self)
 			entity.option = option
 			entity.question = self
 		}

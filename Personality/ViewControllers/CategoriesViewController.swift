@@ -28,7 +28,21 @@ class CategoriesViewController: UIViewController {
 		
 		self.title = R.string.localizable.categoriesViewControllerTitle()
 	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if 	segue.identifier == R.segue.categoriesViewController.goToQuestions.identifier,
+			let questionNavigationViewController = segue.destination as? UINavigationController,
+			let questionViewController = questionNavigationViewController.viewControllers.first as? QuestionViewController,
+			let cell = sender as? UICollectionViewCell,
+			let indexPath = self.collectionView.indexPath(for: cell) {
+				let category = self.viewModel.categories[indexPath.row]
+				let questionViewModel = QuestionViewModel(withQuestionIndex: self.viewModel.nextQuestionIndex, andCategory: category)
+				questionViewController.viewModel = questionViewModel
+		}
+	}
 }
+
+// MARK: - CollectionView delegates
 
 extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 	
@@ -43,7 +57,7 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
 		}
 		
 		let category = self.viewModel.categories[indexPath.row]
-		cell.setContent(category: category)
+		cell.setContent(with: category)
 		
 		return cell
 	}

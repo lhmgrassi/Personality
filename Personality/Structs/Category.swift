@@ -25,7 +25,7 @@ struct Category: CategoryProtocol {
 	var questions			: String
 	var questionsAnswered	: String
 	
-	init(withEntity entity: Categories, forIndex index: Int) {
+	init(withEntity entity: DBCategories, forIndex index: Int) {
 		self.category = entity.category ?? ""
 		
 		self.categoryColor = Constants.Category.colors[index % Constants.Category.colors.count]
@@ -33,7 +33,7 @@ struct Category: CategoryProtocol {
 		self.questions = R.string.localizable.categoriesViewControllerTotalQuestions(entity.questions?.count ?? 0)
 		
 		let answeredCount = entity.questions!.filter { (question) -> Bool in
-			return (question as! Questions).answer != nil
+			return (question as! DBQuestions).answer != nil
 		}.count
 		self.questionsAnswered = R.string.localizable.categoriesViewControllerTotalQuestionsAnswered(answeredCount)
 	}

@@ -91,7 +91,7 @@
                                             <outlet property="categoryLabel" destination="whx-CX-thi" id="GUy-m9-WXI"/>
                                             <outlet property="questionsAnsweredLabel" destination="Zra-FF-SGR" id="uKp-QF-QYy"/>
                                             <outlet property="questionsLabel" destination="lO9-9d-EBe" id="dxB-XF-7vW"/>
-                                            <segue destination="2Bn-O3-tHN" kind="show" id="Rt7-gO-sum"/>
+                                            <segue destination="2Bn-O3-tHN" kind="show" identifier="goToQuestions" id="Rt7-gO-sum"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

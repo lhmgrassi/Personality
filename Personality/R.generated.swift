@@ -93,16 +93,48 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 2 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `CategoryCollectionViewCellIdentifier`.
     static let categoryCollectionViewCellIdentifier: Rswift.ReuseIdentifier<CategoryCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "CategoryCollectionViewCellIdentifier")
+    /// Reuse identifier `QuestionTableViewCell`.
+    static let questionTableViewCell: Rswift.ReuseIdentifier<QuestionTableViewCell> = Rswift.ReuseIdentifier(identifier: "QuestionTableViewCell")
     
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
+    /// This struct is generated for `CategoriesViewController`, and contains static references to 1 segues.
+    struct categoriesViewController {
+      /// Segue identifier `goToQuestions`.
+      static let goToQuestions: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, CategoriesViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "goToQuestions")
+      
+      /// Optionally returns a typed version of segue `goToQuestions`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func goToQuestions(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, CategoriesViewController, UIKit.UINavigationController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.categoriesViewController.goToQuestions, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This struct is generated for `QuestionViewController`, and contains static references to 1 segues.
+    struct questionViewController {
+      /// Segue identifier `goToNextQuestion`.
+      static let goToNextQuestion: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, QuestionViewController, QuestionViewController> = Rswift.StoryboardSegueIdentifier(identifier: "goToNextQuestion")
+      
+      /// Optionally returns a typed version of segue `goToNextQuestion`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func goToNextQuestion(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, QuestionViewController, QuestionViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.questionViewController.goToNextQuestion, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   

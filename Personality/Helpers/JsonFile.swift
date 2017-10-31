@@ -36,12 +36,12 @@ struct JsonFile {
 			}
 			
 			categories.forEach({ (category: String) in
-				let entity = CoreDataHelper.shared.insertNewObject(entity: Categories.self)
+				let entity = CoreDataHelper.shared.insertNewObject(entity: DBCategories.self)
 				entity.category = category
 			})
 			
 			questions.forEach({ (question: Dictionary<String, AnyObject>) in
-				let entity = CoreDataHelper.shared.insertNewObject(entity: Questions.self)
+				let entity = CoreDataHelper.shared.insertNewObject(entity: DBQuestions.self)
 				entity.setProperties(dictionary: question)
 			})
 						

@@ -15,13 +15,16 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 	@IBOutlet private weak var questionsLabel			: UILabel!
 	@IBOutlet private weak var questionsAnsweredLabel	: UILabel!
 	
-	func setContent(category: CategoryProtocol) {
-		self.categoryImageView.image = category.categoryImage
-		self.categoryLabel.text = category.category
-		self.categoryLabel.textColor = category.categoryColor
-		self.questionsLabel.text = category.questions
-		self.questionsLabel.textColor = category.categoryColor
-		self.questionsAnsweredLabel.text = category.questionsAnswered
-		self.questionsAnsweredLabel.textColor = category.categoryColor
+	func setContent(with item: CategoryProtocol) {
+		self.categoryImageView.image = item.categoryImage
+		
+		self.categoryLabel.text = item.category
+		self.categoryLabel.textColor = item.categoryColor
+		
+		self.questionsLabel.text = item.questions
+		self.questionsLabel.textColor = item.categoryColor
+		
+		self.questionsAnsweredLabel.text = item.questionsAnswered
+		self.questionsAnsweredLabel.textColor = item.categoryColor
 	}
 }

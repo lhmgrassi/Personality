@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Categories" representedClassName="Categories" syncable="YES" codeGenerationType="class">
+    <entity name="DBCategories" representedClassName="DBCategories" syncable="YES" codeGenerationType="class">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Questions" inverseName="category" inverseEntity="Questions" syncable="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DBQuestions" inverseName="category" inverseEntity="DBQuestions" syncable="YES"/>
     </entity>
-    <entity name="Options" representedClassName="Options" syncable="YES" codeGenerationType="class">
+    <entity name="DBOptions" representedClassName="DBOptions" syncable="YES" codeGenerationType="class">
         <attribute name="option" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Questions" inverseName="options" inverseEntity="Questions" syncable="YES"/>
+        <relationship name="question" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBQuestions" inverseName="options" inverseEntity="DBQuestions" syncable="YES"/>
     </entity>
-    <entity name="Questions" representedClassName="Questions" syncable="YES" codeGenerationType="class">
+    <entity name="DBQuestions" representedClassName="DBQuestions" syncable="YES" codeGenerationType="class">
         <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Categories" inverseName="questions" inverseEntity="Categories" syncable="YES"/>
-        <relationship name="options" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Options" inverseName="question" inverseEntity="Options" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBCategories" inverseName="questions" inverseEntity="DBCategories" syncable="YES"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DBOptions" inverseName="question" inverseEntity="DBOptions" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Categories" positionX="-54" positionY="-9" width="128" height="75"/>
-        <element name="Options" positionX="-18" positionY="27" width="128" height="75"/>
-        <element name="Questions" positionX="-36" positionY="9" width="128" height="120"/>
+        <element name="DBCategories" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="DBOptions" positionX="-18" positionY="27" width="128" height="75"/>
+        <element name="DBQuestions" positionX="-36" positionY="9" width="128" height="120"/>
     </elements>
 </model>

@@ -9,18 +9,21 @@
 import UIKit
 import CoreData
 
-protocol CategoriesViewModelProtocol : class {
+protocol CategoriesViewModelProtocol {
 	
+	var nextQuestionIndex : Int { get set }
 	var categories: [CategoryProtocol] { get set }
 }
 
 class CategoriesViewModel : CategoriesViewModelProtocol {
 
+	var nextQuestionIndex = 0
 	var categories: [CategoryProtocol] = []
 	
 	init() {
-		let categoriesModel = CoreDataHelper.shared.getAllObjects(for: Categories.self)
-		for (index, categoryModel) in (categoriesModel?.enumerated())! {
+		let dbCategories = CoreDataHelper.shared.getAllObjects(for: DBCategories.self)
+	
+		for (index, categoryModel) in (dbCategories?.enumerated())! {
 			let category = Category.init(withEntity: categoryModel, forIndex: index)
 			categories.append(category)
 		}

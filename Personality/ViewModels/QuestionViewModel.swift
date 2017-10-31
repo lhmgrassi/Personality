@@ -9,20 +9,25 @@
 import UIKit
 import CoreData
 
-protocol QuestionViewModelProtocol : class {
+protocol QuestionViewModelProtocol {
 	
-	var categories: [CategoryProtocol] { get set }
+	var question: QuestionProtocol? { get set }
 }
 
 class QuestionViewModel : QuestionViewModelProtocol {
 
-	var categories: [CategoryProtocol] = []
+	var question: QuestionProtocol?
 	
-	init() {
-		let categoriesModel = CoreDataHelper.shared.getAllObjects(for: Categories.self)
-		for (index, categoryModel) in (categoriesModel?.enumerated())! {
-			let category = Category.init(withEntity: categoryModel, forIndex: index)
-			categories.append(category)
+	init?(withQuestionIndex index: Int, andCategory category: CategoryProtocol) {
+		let predicate = NSPredicate(format: "category.category == %@", category.category)
+		let dbQuestions = CoreDataHelper.shared.get(for: DBQuestions.self, withPredicate: predicate)
+		
+		guard
+			let questions = dbQuestions,
+			index < questions.count else {
+				return nil
 		}
+		
+		self.question = Question(withEntity: questions[index], withCategory: category)
 	}
 }
