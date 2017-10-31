@@ -66,6 +66,5 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
 		
 		return CGSize(width: UIScreen.main.bounds.width/2, height: Constants.Category.cellHeight)
 	}
-	
 }
 

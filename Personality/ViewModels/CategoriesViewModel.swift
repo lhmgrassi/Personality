@@ -15,7 +15,7 @@ protocol CategoriesViewModelProtocol {
 	var categories: [CategoryProtocol] { get set }
 }
 
-class CategoriesViewModel : CategoriesViewModelProtocol {
+struct CategoriesViewModel : CategoriesViewModelProtocol {
 
 	var nextQuestionIndex = 0
 	var categories: [CategoryProtocol] = []

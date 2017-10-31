@@ -18,8 +18,6 @@ class QuestionViewController: UIViewController {
 
 	var viewModel: QuestionViewModelProtocol!
 	
-	var questionIndex: Int = 0
-	
 	// MARK: - Lifecycle
 	
 	override func viewDidLoad() {
@@ -29,12 +27,19 @@ class QuestionViewController: UIViewController {
 		self.questionLabel.text = self.viewModel.question?.question
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == R.segue.questionViewController.goToNextQuestion.identifier {
+			let nextQuestionViewController = segue.destination as! QuestionViewController
+			let nextQuestionViewModel = QuestionViewModel(withQuestionIndex: self.viewModel.currentQuestionIndex + 1, andCategory: self.viewModel.question!.category)
+			nextQuestionViewController.viewModel = nextQuestionViewModel
+		}
+	}
+	
 	// MARK: - IBAction
 	
 	@IBAction private func finishedTapped(_ sender: Any) {
 		self.dismiss(animated: true, completion: nil)
 	}
-	
 }
 
 // MARK: - TableView delegates

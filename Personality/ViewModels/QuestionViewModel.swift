@@ -11,16 +11,20 @@ import CoreData
 
 protocol QuestionViewModelProtocol {
 	
+	var currentQuestionIndex : Int { get set }
 	var question: QuestionProtocol? { get set }
 }
 
-class QuestionViewModel : QuestionViewModelProtocol {
+struct QuestionViewModel : QuestionViewModelProtocol {
 
+	var currentQuestionIndex : Int
 	var question: QuestionProtocol?
 	
 	init?(withQuestionIndex index: Int, andCategory category: CategoryProtocol) {
 		let predicate = NSPredicate(format: "category.category == %@", category.category)
 		let dbQuestions = CoreDataHelper.shared.get(for: DBQuestions.self, withPredicate: predicate)
+		
+		self.currentQuestionIndex = index
 		
 		guard
 			let questions = dbQuestions,
