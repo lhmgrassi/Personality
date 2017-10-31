@@ -11,6 +11,7 @@ import UIKit
 protocol QuestionProtocol {
 	
 	var question			: String { get set }
+	var answer				: String? { get set }
 	var category			: CategoryProtocol { get set }
 	var options				: [OptionProtocol] { get set }
 }
@@ -18,12 +19,14 @@ protocol QuestionProtocol {
 struct Question: QuestionProtocol {
 
 	var question			: String
+	var answer				: String?
 	var category			: CategoryProtocol
 	var options				: [OptionProtocol]
 
 	init(withEntity entity: DBQuestions, withCategory category: CategoryProtocol) {
 		self.question = entity.question ?? ""
 		self.category = category
+		self.answer = entity.answer
 		
 		self.options = []
 		entity.options?.forEach({ (entity) in

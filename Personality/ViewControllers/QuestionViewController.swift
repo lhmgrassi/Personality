@@ -38,8 +38,9 @@ class QuestionViewController: UIViewController {
 	}
 	
 	override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-		if identifier == R.segue.questionViewController.goToNextQuestion.identifier {
-			self.viewModel.updateEntity(forIndex: self.tableView.indexPathForSelectedRow!.row)
+		if 	identifier == R.segue.questionViewController.goToNextQuestion.identifier,
+			let row = self.tableView.indexPathForSelectedRow?.row {
+				self.viewModel.updateEntity(forIndex: row)
 		}
 		
 		if identifier == R.segue.questionViewController.goToNextQuestion.identifier || identifier == R.segue.questionViewController.skipCurrentQuestion.identifier {
@@ -63,6 +64,11 @@ class QuestionViewController: UIViewController {
 	private func dismissViewController() {
 		self.dismiss(animated: true, completion: nil)
 	}
+	
+	private func didSelectedAnswer() {
+		self.nextQuestionButton.isUserInteractionEnabled = true
+		self.nextQuestionImageView.image = R.image.ic_ios_blue()
+	}
 
 	// MARK: - IBAction
 	
@@ -85,19 +91,25 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
 			return UITableViewCell()
 		}
 
-		guard let option = self.viewModel.question?.options[indexPath.row] else {
-			assertionFailure("Option can not be nil.")
+		guard let question = self.viewModel.question else {
+			assertionFailure("Question can not be nil.")
 			return UITableViewCell()
 		}
 
+		let option = question.options[indexPath.row]
+		
 		cell.setContent(with: option)
+		
+		if option.option == question.answer {
+			self.tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+			self.didSelectedAnswer()
+		}
 		
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		self.nextQuestionButton.isUserInteractionEnabled = true
-		self.nextQuestionImageView.image = R.image.ic_ios_blue()
+		self.didSelectedAnswer()
 	}
 }
 
