@@ -13,6 +13,7 @@ protocol CategoriesViewModelProtocol {
 	
 	var nextQuestionIndex 	: Int { get set }
 	var categories			: [CategoryProtocol] { get set }
+	mutating func updateCategories()
 }
 
 struct CategoriesViewModel : CategoriesViewModelProtocol {
@@ -23,11 +24,16 @@ struct CategoriesViewModel : CategoriesViewModelProtocol {
 	var categories: [CategoryProtocol] = []
 	
 	init() {
-		let dbCategories = CoreDataHelper.shared.getAllObjects(for: DBCategories.self)
+		self.updateCategories()
+	}
 	
+	mutating func updateCategories() {
+		let dbCategories = CoreDataHelper.shared.getAllObjects(for: DBCategories.self)
+		
+		self.categories.removeAll()
 		for (index, categoryModel) in (dbCategories?.enumerated())! {
 			let category = Category.init(withEntity: categoryModel, forIndex: index)
-			categories.append(category)
+			self.categories.append(category)
 		}
 	}
 }

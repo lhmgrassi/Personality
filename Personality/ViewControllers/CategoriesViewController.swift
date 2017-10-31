@@ -22,11 +22,19 @@ class CategoriesViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.title = R.string.localizable.categoriesViewControllerTitle()
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
 		if self.viewModel == nil {
 			self.viewModel = CategoriesViewModel()
+		} else {
+			self.viewModel.updateCategories()
 		}
 		
-		self.title = R.string.localizable.categoriesViewControllerTitle()
+		self.collectionView.reloadData()
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
