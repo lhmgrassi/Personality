@@ -27,9 +27,6 @@
 		1C1BAD171FA28430002E41E1 /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* JsonFile.swift */; };
 		1C1BAD181FA28430002E41E1 /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* JsonFile.swift */; };
 		1C1BAD191FA28430002E41E1 /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD161FA28430002E41E1 /* JsonFile.swift */; };
-		1C1BAD1C1FA284AE002E41E1 /* personality_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1B1FA284AE002E41E1 /* personality_test.json */; };
-		1C1BAD1D1FA284AE002E41E1 /* personality_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1B1FA284AE002E41E1 /* personality_test.json */; };
-		1C1BAD1E1FA284AE002E41E1 /* personality_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1B1FA284AE002E41E1 /* personality_test.json */; };
 		1C1BAD201FA287D6002E41E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1F1FA287D6002E41E1 /* Constants.swift */; };
 		1C1BAD211FA287D6002E41E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1F1FA287D6002E41E1 /* Constants.swift */; };
 		1C1BAD221FA287D6002E41E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD1F1FA287D6002E41E1 /* Constants.swift */; };
@@ -42,6 +39,7 @@
 		1C1BAD551FA2B695002E41E1 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */; };
 		1C1BAD591FA2B7EB002E41E1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BAD581FA2B7EB002E41E1 /* Category.swift */; };
 		1C5FDA491FA90CD800973CFA /* ConditionalQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5FDA481FA90CD800973CFA /* ConditionalQuestionViewController.swift */; };
+		1C5FDA4B1FA93CD000973CFA /* personality_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C5FDA4A1FA93CD000973CFA /* personality_test.json */; };
 		CCD82AFB6F76E2AD5A9E106B /* Pods_Personality.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E234BFBC15532C5FB71F846 /* Pods_Personality.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,13 +85,13 @@
 		1C1BAD011FA27D44002E41E1 /* PersonalityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityUITests.swift; sourceTree = "<group>"; };
 		1C1BAD031FA27D44002E41E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C1BAD161FA28430002E41E1 /* JsonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFile.swift; sourceTree = "<group>"; };
-		1C1BAD1B1FA284AE002E41E1 /* personality_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = personality_test.json; path = "../../../../../Downloads/coding_exercises_options-master/personality_test/database/personality_test.json"; sourceTree = "<group>"; };
 		1C1BAD1F1FA287D6002E41E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1C1BAD241FA29320002E41E1 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		1C1BAD501FA2A1F4002E41E1 /* Questions+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questions+Helper.swift"; sourceTree = "<group>"; };
 		1C1BAD541FA2B695002E41E1 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		1C1BAD581FA2B7EB002E41E1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		1C5FDA481FA90CD800973CFA /* ConditionalQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalQuestionViewController.swift; sourceTree = "<group>"; };
+		1C5FDA4A1FA93CD000973CFA /* personality_test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = personality_test.json; sourceTree = "<group>"; };
 		1FDF2E4DC07C22AED77B3ED9 /* Pods-Personality.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Personality.release.xcconfig"; path = "Pods/Target Support Files/Pods-Personality/Pods-Personality.release.xcconfig"; sourceTree = "<group>"; };
 		4F0784955BECD342FA21A4CB /* Pods_PersonalityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E234BFBC15532C5FB71F846 /* Pods_Personality.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Personality.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,10 +239,10 @@
 		1C1BAD1A1FA28498002E41E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1C5FDA4A1FA93CD000973CFA /* personality_test.json */,
 				1C0623D21FA4B9EF007A5665 /* R.generated.swift */,
 				1C1BACE51FA27D44002E41E1 /* Personality.xcdatamodeld */,
 				1C1BACED1FA27D44002E41E1 /* Info.plist */,
-				1C1BAD1B1FA284AE002E41E1 /* personality_test.json */,
 				1C1BACEA1FA27D44002E41E1 /* LaunchScreen.storyboard */,
 				1C1BACE81FA27D44002E41E1 /* Assets.xcassets */,
 				1C0623DA1FA4BDC8007A5665 /* Localizable.strings */,
@@ -394,9 +392,9 @@
 			files = (
 				1C0623D81FA4BDC8007A5665 /* Localizable.strings in Resources */,
 				1C1BACEC1FA27D44002E41E1 /* LaunchScreen.storyboard in Resources */,
+				1C5FDA4B1FA93CD000973CFA /* personality_test.json in Resources */,
 				1C0623DC1FA6031B007A5665 /* Questions.storyboard in Resources */,
 				1C1BACE91FA27D44002E41E1 /* Assets.xcassets in Resources */,
-				1C1BAD1C1FA284AE002E41E1 /* personality_test.json in Resources */,
 				1C1BACE41FA27D44002E41E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +403,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1BAD1D1FA284AE002E41E1 /* personality_test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +410,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C1BAD1E1FA284AE002E41E1 /* personality_test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
