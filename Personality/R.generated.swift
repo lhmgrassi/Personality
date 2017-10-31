@@ -40,7 +40,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
     /// Image `category1`.
     static let category1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "category1")
@@ -50,8 +50,12 @@ struct R: Rswift.Validatable {
     static let category3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "category3")
     /// Image `category4`.
     static let category4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "category4")
-    /// Image `icon_list`.
-    static let icon_list = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_list")
+    /// Image `check`.
+    static let check = Rswift.ImageResource(bundle: R.hostingBundle, name: "check")
+    /// Image `ic_ios_blue`.
+    static let ic_ios_blue = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_ios_blue")
+    /// Image `ic_ios_gray`.
+    static let ic_ios_gray = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_ios_gray")
     /// Image `icon_splash`.
     static let icon_splash = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_splash")
     
@@ -75,9 +79,19 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.category4, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "icon_list", bundle: ..., traitCollection: ...)`
-    static func icon_list(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.icon_list, compatibleWith: traitCollection)
+    /// `UIImage(named: "check", bundle: ..., traitCollection: ...)`
+    static func check(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.check, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ic_ios_blue", bundle: ..., traitCollection: ...)`
+    static func ic_ios_blue(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_ios_blue, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ic_ios_gray", bundle: ..., traitCollection: ...)`
+    static func ic_ios_gray(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_ios_gray, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "icon_splash", bundle: ..., traitCollection: ...)`
@@ -120,16 +134,25 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This struct is generated for `QuestionViewController`, and contains static references to 1 segues.
+    /// This struct is generated for `QuestionViewController`, and contains static references to 2 segues.
     struct questionViewController {
       /// Segue identifier `goToNextQuestion`.
       static let goToNextQuestion: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, QuestionViewController, QuestionViewController> = Rswift.StoryboardSegueIdentifier(identifier: "goToNextQuestion")
+      /// Segue identifier `skipCurrentQuestion`.
+      static let skipCurrentQuestion: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, QuestionViewController, QuestionViewController> = Rswift.StoryboardSegueIdentifier(identifier: "skipCurrentQuestion")
       
       /// Optionally returns a typed version of segue `goToNextQuestion`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func goToNextQuestion(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, QuestionViewController, QuestionViewController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.questionViewController.goToNextQuestion, segue: segue)
+      }
+      
+      /// Optionally returns a typed version of segue `skipCurrentQuestion`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func skipCurrentQuestion(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, QuestionViewController, QuestionViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.questionViewController.skipCurrentQuestion, segue: segue)
       }
       
       fileprivate init() {}
@@ -167,7 +190,7 @@ struct R: Rswift.Validatable {
   
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 3 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 5 localization keys.
     struct localizable {
       /// en translation: %d answered
       /// 
@@ -181,6 +204,14 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: en
       static let categoriesViewControllerTitle = Rswift.StringResource(key: "categoriesViewController.title", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Finish
+      /// 
+      /// Locales: en
+      static let finish = Rswift.StringResource(key: "finish", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Skip this question
+      /// 
+      /// Locales: en
+      static let questionViewControllerSkipThisQuestion = Rswift.StringResource(key: "questionViewController.skipThisQuestion", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       
       /// en translation: %d answered
       /// 
@@ -201,6 +232,20 @@ struct R: Rswift.Validatable {
       /// Locales: en
       static func categoriesViewControllerTitle(_: Void = ()) -> String {
         return NSLocalizedString("categoriesViewController.title", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Finish
+      /// 
+      /// Locales: en
+      static func finish(_: Void = ()) -> String {
+        return NSLocalizedString("finish", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// en translation: Skip this question
+      /// 
+      /// Locales: en
+      static func questionViewControllerSkipThisQuestion(_: Void = ()) -> String {
+        return NSLocalizedString("questionViewController.skipThisQuestion", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
@@ -271,7 +316,8 @@ struct _R: Rswift.Validatable {
       let name = "Questions"
       
       static func validate() throws {
-        if UIKit.UIImage(named: "icon_list") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_list' is used in storyboard 'Questions', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "check") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'check' is used in storyboard 'Questions', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "ic_ios_gray") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_ios_gray' is used in storyboard 'Questions', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

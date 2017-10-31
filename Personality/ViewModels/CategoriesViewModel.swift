@@ -11,8 +11,8 @@ import CoreData
 
 protocol CategoriesViewModelProtocol {
 	
-	var nextQuestionIndex : Int { get set }
-	var categories: [CategoryProtocol] { get set }
+	var nextQuestionIndex 	: Int { get set }
+	var categories			: [CategoryProtocol] { get set }
 }
 
 struct CategoriesViewModel : CategoriesViewModelProtocol {

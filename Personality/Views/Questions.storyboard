@@ -28,35 +28,49 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHD-KS-L9P">
-                                        <rect key="frame" x="268" y="22" width="43" height="21"/>
+                                        <rect key="frame" x="312" y="22" width="43" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utd-GX-h7l">
-                                        <rect key="frame" x="327" y="12" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="VgT-zK-S8B"/>
-                                            <constraint firstAttribute="width" constant="40" id="ldp-ZW-8nd"/>
-                                        </constraints>
-                                        <state key="normal" image="icon_list"/>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="utd-GX-h7l" secondAttribute="trailing" constant="8" id="13l-34-lky"/>
                                     <constraint firstAttribute="bottom" secondItem="IuT-LQ-L2c" secondAttribute="bottom" constant="24" id="85p-8C-ljY"/>
-                                    <constraint firstItem="utd-GX-h7l" firstAttribute="top" secondItem="lEe-Wy-aq0" secondAttribute="top" constant="12" id="H4l-HP-SpK"/>
                                     <constraint firstItem="IuT-LQ-L2c" firstAttribute="leading" secondItem="lEe-Wy-aq0" secondAttribute="leading" constant="16" id="Rmb-WN-6d8"/>
                                     <constraint firstAttribute="trailing" secondItem="IuT-LQ-L2c" secondAttribute="trailing" constant="16" id="VAK-pv-rAf"/>
                                     <constraint firstItem="IuT-LQ-L2c" firstAttribute="top" secondItem="KHD-KS-L9P" secondAttribute="bottom" constant="37" id="W1O-i6-jgJ"/>
-                                    <constraint firstItem="KHD-KS-L9P" firstAttribute="centerY" secondItem="utd-GX-h7l" secondAttribute="centerY" id="ZuH-ZT-9mG"/>
-                                    <constraint firstItem="utd-GX-h7l" firstAttribute="leading" secondItem="KHD-KS-L9P" secondAttribute="trailing" constant="16" id="yNN-IK-pWm"/>
+                                    <constraint firstItem="KHD-KS-L9P" firstAttribute="top" secondItem="lEe-Wy-aq0" secondAttribute="top" constant="22" id="YFs-oN-SWZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="KHD-KS-L9P" secondAttribute="trailing" constant="20" id="bAg-HC-hCH"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OTI-fd-90N">
                                 <rect key="frame" x="0.0" y="192" width="375" height="475"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="RZq-8O-YIF">
+                                    <rect key="frame" x="0.0" y="110" width="375" height="57"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxb-Ym-k4T">
+                                            <rect key="frame" x="126" y="8" width="122" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="fGd-yS-pCD"/>
+                                            </constraints>
+                                            <state key="normal" title="Skip this question">
+                                                <color key="titleColor" red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="29X-of-ugV" kind="show" identifier="skipCurrentQuestion" id="aOq-vC-GUz"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.95686274510000002" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="wxb-Ym-k4T" firstAttribute="centerX" secondItem="RZq-8O-YIF" secondAttribute="centerX" id="7gW-hJ-Mlp"/>
+                                        <constraint firstItem="wxb-Ym-k4T" firstAttribute="centerX" secondItem="RZq-8O-YIF" secondAttribute="centerX" id="TMd-tz-nYs"/>
+                                        <constraint firstItem="wxb-Ym-k4T" firstAttribute="centerY" secondItem="RZq-8O-YIF" secondAttribute="centerY" id="unK-Op-bo6"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="82" id="Cyu-Dz-GA1" customClass="QuestionTableViewCell" customModule="Personality" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="82"/>
@@ -85,6 +99,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="Kq5-dC-Wpg" firstAttribute="top" secondItem="9OV-vd-Qfg" secondAttribute="top" constant="8" id="Acr-y9-xLi"/>
                                                 <constraint firstAttribute="trailing" secondItem="Kq5-dC-Wpg" secondAttribute="trailing" constant="30" id="WRe-9J-GvA"/>
@@ -92,8 +107,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="Kq5-dC-Wpg" secondAttribute="bottom" constant="8" id="y9v-24-mIK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="optionLabel" destination="4x0-79-nz9" id="6He-Bs-1Qq"/>
+                                            <outlet property="questionContainerView" destination="Kq5-dC-Wpg" id="SCQ-K2-fnS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -103,21 +120,33 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgI-ob-oua">
-                                <rect key="frame" x="201" y="513" width="174" height="154"/>
+                                <rect key="frame" x="275" y="567" width="100" height="100"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOr-dG-ml2">
-                                        <rect key="frame" x="99" y="87" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_ios_gray" translatesAutoresizingMaskIntoConstraints="NO" id="M1N-l7-PIX">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    </imageView>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOr-dG-ml2">
+                                        <rect key="frame" x="30" y="26" width="70" height="74"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="74" id="Hun-Mw-QvM"/>
+                                            <constraint firstAttribute="width" constant="70" id="Z3z-XJ-IE2"/>
+                                        </constraints>
+                                        <state key="normal" image="check"/>
                                         <connections>
                                             <segue destination="29X-of-ugV" kind="show" identifier="goToNextQuestion" id="vuf-kr-A40"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="174" id="GjP-2a-1Ub"/>
-                                    <constraint firstAttribute="height" constant="154" id="Zti-5p-1Ep"/>
+                                    <constraint firstAttribute="bottom" secondItem="M1N-l7-PIX" secondAttribute="bottom" id="94E-ee-THe"/>
+                                    <constraint firstAttribute="width" constant="100" id="GjP-2a-1Ub"/>
+                                    <constraint firstItem="M1N-l7-PIX" firstAttribute="leading" secondItem="ZgI-ob-oua" secondAttribute="leading" id="KLb-Vf-Nsh"/>
+                                    <constraint firstAttribute="bottom" secondItem="WOr-dG-ml2" secondAttribute="bottom" id="QVx-XD-baz"/>
+                                    <constraint firstAttribute="trailing" secondItem="M1N-l7-PIX" secondAttribute="trailing" id="WCq-cm-hd8"/>
+                                    <constraint firstAttribute="height" constant="100" id="Zti-5p-1Ep"/>
+                                    <constraint firstAttribute="trailing" secondItem="WOr-dG-ml2" secondAttribute="trailing" id="eim-xZ-2iL"/>
+                                    <constraint firstItem="M1N-l7-PIX" firstAttribute="top" secondItem="ZgI-ob-oua" secondAttribute="top" id="xBo-nQ-Tg9"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -143,7 +172,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="finishBarButtonItem" destination="sNK-bN-6px" id="CU0-IO-Wt2"/>
+                        <outlet property="nextQuestionButton" destination="WOr-dG-ml2" id="cke-w7-GYT"/>
+                        <outlet property="nextQuestionImageView" destination="M1N-l7-PIX" id="emF-m5-jAV"/>
+                        <outlet property="questionIndexLabel" destination="KHD-KS-L9P" id="pEa-1v-9np"/>
                         <outlet property="questionLabel" destination="IuT-LQ-L2c" id="Fve-sB-gOS"/>
+                        <outlet property="skipThisQuestionButton" destination="wxb-Ym-k4T" id="0Wj-kx-9P4"/>
                         <outlet property="tableView" destination="OTI-fd-90N" id="TGa-Yq-fRB"/>
                     </connections>
                 </viewController>
@@ -171,6 +205,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_list" width="15" height="17"/>
+        <image name="check" width="42" height="32"/>
+        <image name="ic_ios_gray" width="110" height="103"/>
     </resources>
 </document>

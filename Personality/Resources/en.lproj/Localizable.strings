@@ -6,6 +6,10 @@
   Copyright © 2017 lhmgrassi. All rights reserved.
 */
 
+"finish" = "Finish";
+
 "categoriesViewController.title" = "Categories";
 "categoriesViewController.totalQuestions" = "%d questions";
 "categoriesViewController.totalQuestionsAnswered" = "%d answered";
+
+"questionViewController.skipThisQuestion" = "Skip this question";

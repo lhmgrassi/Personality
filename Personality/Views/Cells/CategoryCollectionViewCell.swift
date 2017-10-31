@@ -21,10 +21,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
 		self.categoryLabel.text = item.category
 		self.categoryLabel.textColor = item.categoryColor
 		
-		self.questionsLabel.text = item.questions
+		self.questionsLabel.text = item.questionsLabel
 		self.questionsLabel.textColor = item.categoryColor
 		
-		self.questionsAnsweredLabel.text = item.questionsAnswered
+		self.questionsAnsweredLabel.text = item.questionsAnsweredLabel
 		self.questionsAnsweredLabel.textColor = item.categoryColor
 	}
 }

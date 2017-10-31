@@ -11,8 +11,13 @@ import Rswift
 
 class QuestionViewController: UIViewController {
 	
-	@IBOutlet private weak var questionLabel: UILabel!
-	@IBOutlet private weak var tableView: UITableView!
+	@IBOutlet private weak var questionIndexLabel			: UILabel!
+	@IBOutlet private weak var questionLabel				: UILabel!
+	@IBOutlet private weak var tableView					: UITableView!
+	@IBOutlet private weak var nextQuestionButton			: UIButton!
+	@IBOutlet private weak var nextQuestionImageView		: UIImageView!
+	@IBOutlet private weak var skipThisQuestionButton		: UIButton!
+	@IBOutlet private weak var finishBarButtonItem			: UIBarButtonItem!
 	
 	// MARK: - Public properties
 
@@ -23,18 +28,38 @@ class QuestionViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+		
 		self.title = self.viewModel.question?.category.category
+		self.finishBarButtonItem.title = R.string.localizable.finish()
+		self.skipThisQuestionButton.setTitle(R.string.localizable.questionViewControllerSkipThisQuestion(), for: .normal)
 		self.questionLabel.text = self.viewModel.question?.question
+		self.questionIndexLabel.text = "\(self.viewModel.currentQuestionIndex + 1)/\(self.viewModel.questionsCount)"
+	}
+	
+	override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+		if identifier == R.segue.questionViewController.goToNextQuestion.identifier || identifier == R.segue.questionViewController.skipCurrentQuestion.identifier {
+			if !self.viewModel.hasNextQuestion {
+				self.dismissViewController()
+				return false
+			}
+		}
+		
+		return true
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == R.segue.questionViewController.goToNextQuestion.identifier {
+		if segue.identifier == R.segue.questionViewController.goToNextQuestion.identifier || segue.identifier == R.segue.questionViewController.skipCurrentQuestion.identifier {
 			let nextQuestionViewController = segue.destination as! QuestionViewController
 			let nextQuestionViewModel = QuestionViewModel(withQuestionIndex: self.viewModel.currentQuestionIndex + 1, andCategory: self.viewModel.question!.category)
 			nextQuestionViewController.viewModel = nextQuestionViewModel
 		}
 	}
 	
+	private func dismissViewController() {
+		self.dismiss(animated: true, completion: nil)
+	}
+
 	// MARK: - IBAction
 	
 	@IBAction private func finishedTapped(_ sender: Any) {
@@ -65,6 +90,10 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
 		
 		return cell
 	}
-
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		self.nextQuestionButton.isUserInteractionEnabled = true
+		self.nextQuestionImageView.image = R.image.ic_ios_blue()
+	}
 }
 
